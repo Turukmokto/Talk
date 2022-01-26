@@ -59,7 +59,7 @@ class Tests {
         val host = "localhost"
         val port = 8080
 
-        with(User(host, port, port, "phoenix", "Hello")) {
+        with(User(host, port, port, "Turukmokto", "Hello")) {
             sendMessage()
             checkReceived(userName, msg)
             stopAll()
@@ -72,8 +72,8 @@ class Tests {
         val port1 = 8080
         val port2 = 8081
 
-        val user1 = User(host, port1, port2, "phoenix1", "Hello1")
-        val user2 = User(host, port2, port1, "phoenix2", "Hello2")
+        val user1 = User(host, port1, port2, "Turukmokto1", "Hello1")
+        val user2 = User(host, port2, port1, "Turukmokto2", "Hello2")
 
         user1.sendMessage()
         user2.checkReceived(user1.userName, user1.msg)
